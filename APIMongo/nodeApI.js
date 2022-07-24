@@ -10,13 +10,14 @@ app.get("/",async (req,res)=>{
     res.send(result);
 })
 
+
+
 app.post('/',async (req,res)=>{
     
     const db = await dbConnect();
     const result = await db.insertOne(req.body);
 
     res.send(result);
-
-})
+});
 
 app.listen(5000);
